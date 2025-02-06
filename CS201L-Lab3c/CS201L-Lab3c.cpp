@@ -30,20 +30,38 @@ int main() {
 			cout << "\n\nPROCESSING A SET OF MATRICES\n";
 
 			cout << "\n\tPROCESSING FIRST MATRIX\n";
-			//verify vector, if valid, printVector & processVector
+			//verify vector in inputStr1
+
+			//NOTE: all vectors are valid in dataValid.txt
+			//if valid, printVector & processVector
 
 			valid1 = verifyVector(inputStr1, v1);
-			printVector(v1);
-			processVector(v1);
+			if (valid1) {				
+				printVector(v1);
+				// IF row == col;  
+				//   NOTE: v1.size() will return the number of vectors in v1 (ie the number of rows)
+				//         v1[0].size() will give you the number of items in the first row in v1 (ie number of columns)
+				//   processVector(v1);
+				processVector(v1);
+			}
 
-			getline(inFile, inputStr2);
 			cout << "\n\tPROCESSING SECOND MATRIX\n";
 
-			//read next input line, verify vector, if valid, printVector & processVector
+			//read next input line
+			getline(inFile, inputStr2);
+			
+			//verify vector, if valid, printVector & process vector v2
+			//see what is above for v1
+
+
+
 
 			cout << "\n\tPROCESSING BOTH MATRICES\n";
 			//if both vectors are valid, 
 			//   if sizes are correct addTwoMatrices
+
+
+
 
 	}
 	inFile.close();
